@@ -1,0 +1,79 @@
+/* Base setup */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Section styling */
+.menu-item {
+  border: 1px solid black;
+  background-color: #ddd;
+  padding: 40px 15px 15px 15px;
+  position: relative;
+  float: left;
+  margin: 10px;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: #f88; /* change per section below */
+}
+
+/* Specific section colors */
+.chicken .section-title {
+  background-color: #f4a29e;
+}
+
+.beef .section-title {
+  background-color: #de5b5b;
+}
+
+.sushi .section-title {
+  background-color: #f3dc9c;
+}
+
+/* Desktop view (992px and up) */
+@media (min-width: 992px) {
+  .menu-item {
+    width: 30%;
+  }
+}
+
+/* Tablet view (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-item {
+    width: 46%;
+  }
+
+  .menu-item:nth-child(3) {
+    width: 95%;
+    clear: both;
+  }
+}
+
+/* Mobile view (less than 768px) */
+@media (max-width: 767px) {
+  .menu-item {
+    width: 100%;
+  }
+}
